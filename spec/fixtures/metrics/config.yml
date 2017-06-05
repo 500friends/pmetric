@@ -1,0 +1,11 @@
+other:
+  config:
+    host: other.com
+    port: 9919
+    database: other_database
+
+enabled:
+  enabled: true
+
+disabled:
+  enabled: false

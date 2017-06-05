@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/pmetric
+
+    docker:
+      - image: ruby:2.2.4
+
+    environment:
+      BUNDLE_PATH: "vendor/bundle"
+
+    steps:
+      - checkout
+      - run: gem install bundler
+
+      # Restore bundle cache
+      - type: cache-restore
+        key: pmetric-2.2.4-{{ checksum "pmetric.gemspec" }}
+
+      # Bundle install dependencies
+      - run: bundle install
+
+      # Install appraisal
+      - run: bundle exec appraisal install
+
+      # Store bundle cache
+      - type: cache-save
+        key: pmetric-2.2.4-{{ checksum "pmetric.gemspec" }}
+        paths:
+          - vendor/bundle
+
+      # Run rspec in parallel
+      - type: shell
+        command: |
+          bundle exec appraisal rspec --profile 10 \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+
+      # Save artifacts
+      - type: store_test_results
+        path: /tmp/test-results
