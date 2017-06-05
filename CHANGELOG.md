@@ -7,4 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-- Initial Release!
+## [1.0.0] - 2017-06-05
+
+Initial Release!
+
+[Unreleased]: https://github.com/500friends/pmetric/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/500friends/pmetric/tree/v1.0.0
