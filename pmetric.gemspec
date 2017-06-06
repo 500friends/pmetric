@@ -13,9 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Enables configurable metric collection for Rails apps.}
   spec.homepage      = "https://github.com/500friends/pmetric"
 
-  spec.files = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(spec)/})
-  end
+  spec.files = Dir["CHANGELOG.md", "LICENSE", "README.md", "lib/**/*"]
 
   spec.require_paths = ["lib"]
 

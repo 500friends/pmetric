@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 * MIT `LICENSE`
 
+### Changed
+* Updated `spec.files`
+
 ## [1.0.0] - 2017-06-05
 
 Initial Release!
