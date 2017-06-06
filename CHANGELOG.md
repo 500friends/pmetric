@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2017-06-06
+
 ### Added
 * MIT `LICENSE`
 
@@ -17,5 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 Initial Release!
 
-[Unreleased]: https://github.com/500friends/pmetric/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/500friends/pmetric/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/500friends/pmetric/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/500friends/pmetric/tree/v1.0.0
